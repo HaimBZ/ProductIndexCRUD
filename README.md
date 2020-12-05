@@ -1,4 +1,4 @@
-## PRODUCT INDEX CRUD Simple App
+## PRODUCT INDEX CRUD App
 
 ## Overview
 
