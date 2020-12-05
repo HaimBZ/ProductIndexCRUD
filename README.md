@@ -11,7 +11,8 @@ A product filter search is available.
 2. you will have tow folders server/client
 3. in server folder
     3.1 run npm install
-    3.2 npm start
+    3.3 run mongod to connect db (you will need a mongo db connection)
+    3.2 run npm start
     3.3 server will be available in localhost:5000
 4. in client folder
     4.1 npm install
