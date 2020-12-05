@@ -27,18 +27,14 @@ UI using React/Redux with Bootstrap for styling.
 
 Ui Structure elements:
 
-# App.js
+## App.js
 main UI application configuration and dependencies:
-  # browserHistory 
-    manipulate routes
-  # syncHistoryWithStore 
-    syncs the browser history with redux store
-  # PopTypes, 
-    react app data type configurations
-  # configureStore
-    configure redux/application store data
+  1. browserHistory, manipulate routes
+  2. syncHistoryWithStore, syncs the browser history with redux store
+  3. PropTypes, react app data type configurations
+  4. configureStore, configure redux/application store data
 
-# Actions
+## Actions
   in charge to send data from your application to your store
 
   appActions.js
@@ -48,7 +44,7 @@ main UI application configuration and dependencies:
     editProduct
     fetch
 
-# Components
+## Components
   UI independent, reusable components which holds isolated logics. 
   each componment will handle each crud action
 
@@ -59,27 +55,27 @@ main UI application configuration and dependencies:
   ProductForm.js
   Products.js
 
-# Containers
+## Containers
   components that is responsible for retrieving data, by using Redux’s connect and mapStateToProps functions. handle the component which aware of the application state and connected to the redux store. 
 
   App.js
   Product.js
   Products.js
 
-# Reducers
+## Reducers
   used to update the application state object in the store.
 
   appReducer.js
   index.js
   productReducer.js
 
-# Store
+## Store
   application state, handled with actions and reducers
 
   configureStore.js
 
 
-## Backend
+# Backend
 the server works with express server and uses Mogo DB. 
 it has MVC like structure. it has configurations for comunicating 
 with the DB and set the CRUD functions for the rest service.
@@ -87,27 +83,22 @@ with the DB and set the CRUD functions for the rest service.
 app.js - 
 generic server configurations and dependencies:
 
- # body-parser 
-   will let us pull POST content from our HTTP request
-  # mongoose 
-    communicate with the Mongo DB
-  # morgan 
-    used for logging request details
-  # babel 
-    es6 compiler
-  # source-map-support 
-    friendly compilation error handling
+ 1. body-parser, will let us pull POST content from our HTTP request
+  2. mongoose, communicate with the Mongo DB
+  3. morgan, used for logging request details
+  4. babel, es6 compiler
+  5. source-map-support, friendly compilation error handling
 
 app_hooked.js - babel-register configurations
 
-backend structure:
-# controller
+#backend structure:
+## controller
   handle the server rest service configuration with a CRUD functionality.
 
   product.server.controller.js
 
-# models
+## models
   DB schema configurations
 
-# routes
+## routes
   the api routes configurations for the server configurations in app.js
