@@ -9,13 +9,12 @@ A product filter search is available.
 ## Start the APP
 1. clone the repo
 2. you will have tow folders server/client
-3. in server folder run npm install
-4. run mongod to connect db (you will need a mongo db connection)
-5. run npm start
+3. in server and client folders run npm install on each of them.
+4. run npm start on the root folder
 6. server will be available in localhost:5000
-7. in client folder run npm install
-8. npm start
-9. app should run in localhost:3000
+9. app/client will run in localhost:3000
+
+notes: app is connected to atlas mongo db cloud service but you can change it to a local mongo db service by installing mongo db community version. check server/app.js file.
 
 ## App Architecture
 
@@ -82,7 +81,7 @@ with the DB and set the CRUD functions for the rest service.
 app.js - 
 generic server configurations and dependencies:
 
- 1. body-parser, will let us pull POST content from our HTTP request
+  1. body-parser, will let us pull POST content from our HTTP request
   2. mongoose, communicate with the Mongo DB
   3. morgan, used for logging request details
   4. babel, es6 compiler
