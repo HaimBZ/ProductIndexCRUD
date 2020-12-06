@@ -29,12 +29,16 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // server port
 const port = process.env.PORT || 5000;
+const uri = "mongodb+srv://haimb:pa55w0rd@productindex.psoib.mongodb.net/ProductIndex?retryWrites=true&w=majority";
 
 // database connection
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/mern-product-app', {
+// external db config
+mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+// local db config
+/* mongoose.connect('mongodb://localhost/mern-product-app', {
   useMongoClient: true,
-});
+}); */
 
 SourceMapSupport.install();
 

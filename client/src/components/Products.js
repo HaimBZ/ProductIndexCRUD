@@ -73,9 +73,7 @@ export default class Products extends React.Component {
       return item.productDesc.toLowerCase().includes(lowercasedFilter) || 
               item.productText.toLowerCase().includes(lowercasedFilter);
     });
-    console.log("products",products);
-    console.log("lowercasedFilter",lowercasedFilter);
-    console.log("filteredData",filteredData);
+    
     return (
       <div className="col-md-12">
         <div className="products-header row">
