@@ -5,5 +5,14 @@
   "engines": {
     "node": "12.x",
     "npm": "6.x"
+  },
+  "scripts": {
+    "start": "concurrently \"npm run client\" \"npm run server\"",
+    "server": "nodemon server/app_hooked.js",
+    "client": "cd client/ && npm start && cd -",
+    "preinstall": "cd $(pwd)"
+  },
+  "dependencies": {
+    "concurrently": "^5.3.0"
   }
 }
