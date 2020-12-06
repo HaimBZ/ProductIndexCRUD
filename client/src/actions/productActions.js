@@ -104,7 +104,7 @@ export const fetchProductById = (productId) => {
     dispatch(fetchProductRequest());
       // Returns a promise
       return fetch(apiUrl + productId)
-             .then(response => {console.log(response)
+             .then(response => {
                if(response.ok){
                  response.json().then(data => {
                    dispatch(fetchProductSuccess(data.product[0], data.message));

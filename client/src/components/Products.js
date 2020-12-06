@@ -70,10 +70,10 @@ export default class Products extends React.Component {
     const {filter} = this.state;
     const lowercasedFilter = filter.toLowerCase();
     const filteredData = products.filter(item => {
-      return item.productDesc.toLowerCase().includes(lowercasedFilter) || 
-              item.productText.toLowerCase().includes(lowercasedFilter);
+      return (item.productDesc && item.productDesc.toLowerCase().includes(lowercasedFilter)) || 
+             (item.productText && item.productText.toLowerCase().includes(lowercasedFilter));
     });
-    
+
     return (
       <div className="col-md-12">
         <div className="products-header row">
